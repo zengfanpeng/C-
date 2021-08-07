@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Cube{
+private:
+    double a,b,c;
+public:
+    void set_a(double d){
+        a=d;
+    }
+    double get_a(){
+        return a;
+    }
+    void set_b(double d){
+        b=d;
+    }
+    double get_b(){
+        return b;
+    }
+    void set_c(double d){
+        c=d;
+    }
+    double get_c(){
+        return c;
+    }
+
+    double mianji(int a,int b,int c){
+        return 2*a*b+2*a*c+2*b*c;
+    }
+    double tiji(int a,int b,int c){
+        return a*b*c;
+    }
+};
+int main(){
+Cube cube;
+cube.set_a(3);
+cube.set_b(4);
+cube.set_c(5);
+ double h= cube.mianji(cube.get_a(),cube.get_b(),cube.get_c());
+ double j=cube.tiji(cube.get_a(),cube.get_b(),cube.get_c());
+ cout<<h<<endl;
+ cout<<j<<endl;
+}
