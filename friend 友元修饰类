@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class person{
+    friend  class test;
+private:
+    int age;
+protected:
+    string name;
+public:
+    person(string name,int age){
+        this->name=name;
+        this->age=age;
+    }
+    person();
+    void setAge(int age){
+        this->age=age;
+    }
+    int getAge(){
+        return age;
+    }
+    void setName(string name){
+        this->name=name;
+    }
+    string getName(){
+        return name;
+    }
+};
+class test{
+public:
+    test(){
+      person *per=new person("zhu",20);
+      cout<< per->name<<endl;
+      cout<< per->age<<endl;
+    };
+};
+
+void test01(){
+    test test;
+
+}
+
+int main(){
+    test01();
+    system("pause");
+    return 0;
+}
